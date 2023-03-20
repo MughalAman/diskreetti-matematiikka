@@ -1,0 +1,82 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Diskreetti matematiikka} Tehtävät 7}
+\author{\huge{Aman Mughal}}
+\date{07/03/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+    Oheisena on esitetty nuolikuviolla eräs relaatio R.
+    Määritä relaatio formaalisti eli lukuparien avulla.
+    R = \{(\,3,1)\,, (\,8,8)\,, (\,8,g)\,, (\,5,a)\,\}
+    Onko relaatio R myös funktio? Jos ei, niin miksi?
+}
+
+\pf{Vastaus}{
+    Ei ole, koska kaikista joukon A alkioista ei lähde tasan yhtä nuolta joukon B alkioihin
+}
+
+\qs{}{
+    Määritä edellisen relaation käänteisrelaatio $R^{-1}$
+    a) formaalisti eli lukuparien avulla
+    b) graafisesti
+    c) saako kyseisestä relaatiosta jollakin yksinkertaisella tempulla bijektion?
+}
+
+\pf{Vastaus}{
+    a) $R^{-1}$ = \{(\,1,3)\,, (\,8,8)\,, (\,g,8)\,, (\,a,5)\,\} \\
+    b)  \includegraphics[width=0.5\textwidth]{./teht7.png} \\
+
+    c) R = \{(\,3,1)\,, (\,8,8)\,, (\,7,g)\,, (\,5,a)\,\}\\
+    Eli annetaan A:n arvon 7 nuoli B:n alkioon ja otetaan tupla-arvo pois.
+}
+
+\qs{}{
+    Ovatko oheiset relaatiot funktioita? Jos eivät ole, perustele, mikseivät ole.
+}
+
+\pf{Vastaus}{
+    $\cdot$ Ei, koska kaikilla X:n alkiolla ei ole nuolta Y:n alkioihin. \\
+    $\cdot$ Ei, koska X:n alkiolla 2 on kaksi arvoa. \\
+    $\cdot$ Kyllä, koska X:n alkioilla 1, 2, 3 voi olla sama Y:n alkio.
+}
+
+\qs{}{
+    Olkoon X = {1, 2, 3, 4} Mitkä seuraavista relaatioista (X × X osajoukoista) ovat funktioita, miksi? Miksi ei?
+}
+
+\pf{Vastaus}{
+    $\cdot$ \{(\,1, 1)\,, (\,2, 2)\,, (\,3, 3)\,, (\,4, 4)\,\} \\
+    Tämä relaatio on funktio, sillä jokaisella X:n alkioilla on vain yksi vastinpari. \\
+    $\cdot$ \{(\,1, 4)\,, (\,2, 3)\,, (\,2, 2)\,, (\,4, 1)\,\} \\
+    Tämä relaatio ei ole funktio, sillä esimerkiksi luvulla 2 on kaksi vastinparia (\,2, 3)\, ja (\,2, 2)\,. \\
+    $\cdot$ \{(\,2, 3)\,, (\,2, 4)\,, (\,3, 4)\,, (\,4, 4)\,\} \\
+    Tämä relaatio ei ole funktio, sillä luvulla 2 on kaksi vastinparia (\,2, 3)\, ja (\,2, 4)\,. \\
+    $\cdot$ \{(\,1, 1)\,, (\,2, 1)\,, (\,3, 1)\,, (\,4, 1)\,\} \\
+    Tämä relaatio on funktio, sillä jokaisella X:n alkioilla on vain yksi vastinpari.
+}
+
+\qs{}{
+    Luentomateriaalissa on mainittu bijektio. Tämän lisäksi määritellään myös kaksi muuta termiä, eli injektio ja surjektio. Selvitä (\,KVG)\,, mitä näillä tarkoitetaan ja anna esimerkki näistä.
+}
+
+\pf{Vastaus}{
+    Injektio, surjektio ja bijektio ovat käsitteitä, joita käytetään kuvattaessa funktioita. \\\\
+    Injektio tarkoittaa funktiota, jossa jokaiselle toisen komponentin arvolle löytyy korkeintaan yksi vastaava ensimmäisen komponentin arvo. Tämä tarkoittaa sitä, että funktio ei voi saada kahta eri ensimmäisen komponentin arvoa vastaamaan samaa toisen komponentin arvoa.\\
+    Esimerkki: $f(x) = x^2$, joka kuvaa lukuja kokonaislukujen joukosta Z luonnollisten lukujen joukkoon N. Tämä funktio ei ole injektio, sillä esimerkiksi luvuilla $-2$ ja $2$ on sama toinen komponentin arvo $4$. \\\\
+
+    Surjektio tarkoittaa funktiota, jossa jokaiselle toisen komponentin arvolle löytyy ainakin yksi vastaava ensimmäisen komponentin arvo. Tämä tarkoittaa sitä, että funktio "peittää" koko toisen komponentin arvojen joukon. \\
+    Esimerkki: $g(x) = x+1$, joka kuvaa lukuja kokonaislukujen joukosta Z kokonaislukujen joukkoon Z. Tämä funktio on surjektio, sillä jokaiselle kokonaisluvulle k on olemassa kokonaisluku n, jolle $g(n) = k$. \\\\
+
+    Bijektio tarkoittaa funktiota, joka on sekä injektio että surjektio. Tämä tarkoittaa sitä, että jokaiselle toisen komponentin arvolle löytyy tarkalleen yksi vastaava ensimmäisen komponentin arvo, ja että funktio "peittää" koko toisen komponentin arvojen joukon. \\
+    Esimerkki: $h(x) = x-2$, joka kuvaa lukuja reaalilukujen joukosta R reaalilukujen joukkoon R. Tämä funktio on bijektio, sillä jokaiselle reaaliluvulle k on olemassa yksikäsitteinen reaaliluku n, jolle $h(n) = k$.
+}
+
+\end{document}

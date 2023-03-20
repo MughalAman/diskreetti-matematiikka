@@ -1,0 +1,119 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Diskreetti matematiikka} Tehtävät 2}
+\author{\huge{Aman Mughal}}
+\date{20/01/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{6. Formalisoi edellisen kerran tehtävän nro 3 lauseet}{
+    \begin{enumerate}[label=\alph*.] 
+        \item Ulkona sataa ja tuulee.
+        \item Tarja on erehtynyt tai tansseja ei ole tänään.
+        \item Jos Merja on oikeassa, niin Juha soittaa kitaraa.
+        \item Jos kissa kehrää, niin se on tyytyväinen.
+    \end{enumerate}
+    Vinkki: Lauseen formalisointi \\
+- yhdistä atomilauseet oikeilla konnektiiveilla. \\
+- kohta b: usein atomilauseet esitetään aina positiivisina versioina (eli vältetään ’ei’ sanoja )
+}
+
+\pf{Vastaukset}{
+    \begin{align*}
+        \text{a) } & \text{(Sade) = 1 ja (Tuuli) = 1}, \text{ Sade} \land \text{Tuuli} \\
+        \text{b) } & \text{(Tarja erehtyy) = 1 tai (Ei ole tansseja) = 1}, \text{ Tarja erehtyy} \lor \text{Ei ole tansseja} \\
+        \text{c) } & \text{(Merja oikeassa) = 1 niin (Juha soittaa kitaraa) = 1}, \text{ Merja oikeassa} \rightarrow \text{Juha soittaa kitaraa} \\
+        \text{d) } & \text{(Kissa kehrää) = 1 niin (Kissa on tyytyväinen) = 1}, \text{ Kissa kehrää} \rightarrow \text{Kissa on tyytyväinen} \\
+    \end{align*}
+}
+
+\qs{7. Sulkujen käytöstä hieman}{
+    Olkoon lause "Matti Näsä ei ole nuori Toyotan omistaja". \\
+    Se formalisoituu muotoon ¬(N $\land$ T). [N: Matti on nuori, T: Matilla on Toyota Mark II] Vastaa seuraaviin kysymyksiin:
+    \begin{enumerate}[label=\alph*.]
+        \item Voiko nuori Matti omistaa Toyotan? (yo formalisoinnin perusteella, eiköhän tosielämän Matti Näsä ole henkeen ja vereen Toyota-mies)
+        \item Jos sulut otetaan pois, mitä seuraavat formalisoinnit vastaavat: $\neg N \land T ja \neg N \land \neg T$ ?
+    \end{enumerate}
+}
+
+\pf{Vastaukset}{
+    \begin{align*}
+        \text{a) } & \text{Ei, koska Matti ei ole nuori ja hänellä ei ole Toyotaa.} \\
+        \text{b) } & \neg N \land T = \text{Matti ei ole nuori ja hänellä on Toyota.}\\
+        & \neg N \land \neg T = \text{Matti ei ole nuori ja hänellä ei ole Toyotaa.}
+    \end{align*}
+}
+
+\qs{8. Formalisoi lauselogiikan avulla seuraavat luonnolliset lauseet}{
+    \begin{enumerate}[label=\alph*.]
+        \item Jos nukun hyvin, niin olen aamulla virkeä.
+        \item Joko nukun tai olen aamulla väsynyt.
+        \item Jos elämässä on säpinää ja rahaa riittää, niin olen iloinen.
+    \end{enumerate}
+}
+
+\pf{Vastaukset}{
+    \begin{align*}
+        \text{a) } & \text{(Nukun hyvin)} \rightarrow \text{(Olen aamulla virkeä)} \\
+        \text{b) } & \text{(Nukun hyvin)} \lor \text{(Olen aamulla väsynyt)} \\
+        \text{c) } & (\text{(Säpinää elämässä)} \land \text{(Rahaa riittää)}) \rightarrow \text{P(Olen iloinen)} \\
+    \end{align*}
+}
+
+\newpage
+
+\qs{9. Formalisoi seuraavat lauseet (eivät ole yksinkertaisia)}{
+    \begin{enumerate}[label=\alph*.]
+        \item Tuulee, jos sataa.
+        \item Sataa vain, jos tuulee.
+    \end{enumerate}
+}
+
+\pf{Vastaukset}{
+    \begin{align*}
+        \text{a) } & \text{(Tuuli)} \leftarrow \text{(Sade)} \\
+        \text{b) } & \text{($\neg$Tuuli)} \lor \text{(Sade)} \\
+    \end{align*}
+}
+
+\qs{10. Totuusarvotaulukko voidaan muodostaa myös useammalle kuin 2 atomilauseelle}{
+    Millä alkuarvoilla seuraava lauseke on tosi: $\neg ( A \lor B ) \land \neg C$
+}
+
+\pf{Vastaus}{
+    %Create a table with 5 columns and 2 rows
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        A & B & C & $\neg ( A \lor B )$  & $\neg ( A \lor B ) \land \neg C$ \\
+        \hline
+        \hline
+        0 & 0 & 0 & 1 & 1 \\
+        0 & 0 & 1 & 1 & 1 \\
+        \hline
+    \end{tabular}
+    \newline
+    \newline
+    \newline
+}
+
+\qs{ 11. Ystävykset ja taskulamppu}{
+    Neljä ystävystä tuli pimeän tunnelin suulle ja heillä oli vain 1 taskulamppu. Ilman taskulamppua tunnelissa ei pystynyt kulkemaan. Taskulamppu ilmoitti, että sillä riitti virtaa vielä 30 minuuttia. Ystävykset uskalsivat kulkea tunnelin läpi erilaisella vauhdilla. Uljas kulki tunnelin läpi (yhteen suuntaan) 3 minuutissa. Annelta meni vastaavasti aikaa 5, Pekalta 9 ja Vienolta 11 minuuttia. Turvallisuussyistä tunneliin pääsi korkeintaan 2 henkilöä kerrallaan. Tunnelissa kuljettiin tietenkin hitaamman henkilön vauhdin mukaan. Kuinka kaikki ystävykset selviävät ajoissa toiselle puolelle?
+}
+\noindent
+Vastaus:
+\begin{enumerate}
+    \item erä (taskulampussa on 30 min virtaa) \\ Uljas ja Anne (5 min) $\Leftrightarrow$ Uljas (3 min) \\ Anne on toisella puolella
+    \item erä (taskulampussa on 22 min virtaa) \\ Pekka ja Vieno (11 min) $	\Leftrightarrow$ Anne (5 min) \\ Pekka ja Vieno on toisella puolella
+    \item erä (taskulampussa on 6 min virtaa) \\ Uljas ja Anne (5 min) $\rightarrow$ poistuminen \\
+\end{enumerate}
+
+Virtaa jäljellä: 1 min
+
+
+\end{document}

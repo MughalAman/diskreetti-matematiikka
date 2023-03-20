@@ -1,0 +1,90 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Diskreetti matematiikka} Tehtävät 4}
+\author{\huge{Aman Mughal}}
+\date{06/02/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+    20. Meillä on käytössä merkinnät\\
+    V: vanha\\
+    K: kissa\\
+    M: mustavalkoinen\\\\
+    Esa on kissa. Esitä predikaattilogiikan keinoin seuraavat lauseet:\\
+    a) Esa on kissa\\
+    b) Esa on mustavalkoinen kissa\\
+    c) kaikki kissat eivät ole mustavalkoisia\\
+    d) on olemassa oransseja lihavia kissoja \\
+}
+
+\pf{Vastaus}{
+    20.\\
+    a) Esa(K)\\
+    b) Esa(M, K)\\
+    c) \forall x(K(x) \to \neg M(x))\\
+    d) \exists x(O(x) \land F(x) \land K(x)) \\
+}
+
+\qs{}{
+    21. Onko seuraava lauselogiikan mukaan pätevä lause? \\
+    ”Jos kuu kiertää maata, niin maa kiertää aurinkoa. Tästä seuraa, että jos kuu ei kierrä maata, niin maa ei kierrä aurinkoa”.
+}
+
+\pf{Vastaus}{
+    21.\\
+    Ei ole pätevä lause. Seurauslauseiden ei tarvitse olla totta, jos niiden ehto on epätosi. Tässä tapauksessa lauseen "jos kuu ei kierrä maata, niin maa ei kierrä aurinkoa" voi olla epätosi, vaikka lauseen "jos kuu kiertää maata, niin maa kiertää aurinkoa" ehto on tosi.
+}
+
+\qs{}{
+    22. Esitä predikaattilogiikan keinoin seuraavat: \\
+    a) x on eläin.		(predikaattisymboli, lisäksi muuttuja) \\
+    b) x on y:n ystävä. 	(1 predikaattisymboli, 2 muuttujaa) \\
+    c) Matti on Millan ystävä. (1 predikaattisymboli, 2 vakiota) \\
+    d) Keijo on Annikin poika
+}
+
+\pf{Vastaus}{
+    22.\\
+    a) E(x)\\
+    b) K(x, y)\\
+    c) K(Matti, Milla)\\
+    d) P(Keijo, Annikki)
+}
+
+\qs{}{
+    23. Esitä seuraava lause nk. eksistenssikvanttorin $\exists$ avulla. \\
+    ”Kukaan ei ole kuolematon.” \\
+    Esitä se myös nk. universaalikvanttorin $\forall$ avulla.
+}
+
+\pf{Vastaus}{
+    23.\\
+    \exists x(\neg M(x))\\
+    \forall x(M(x))
+}
+
+\qs{}{
+    24. Miettisen kirjan sivulla 93 on esitetty seuraavat ominaisuuksien neljä perusmuotoa \\
+    Tutustu aiheen ja keksi esimerkki jokaiseen. Esimerkki voi olla idealtaan vaikka kuinka päätön tahansa, kunhan se vastaa esitettyä muotoa. 
+}
+
+\pf{Vastaus}{
+    24. \\
+    (1) $\forall$ x(A(x) $\to$ B(x)) \\
+    Jokaisen henkilön, joka on aikuinen, tulee olla äänioikeutettu.\\\\
+    (2) $\forall$ x(A(x) A B(x)) \\
+    Jokaisella henkilöllä, joka on aikuinen, tulee olla äänioikeus ja oikeus äänestää. \\\\
+    (3) 3x(A(x) A B(x)) \\
+    On olemassa henkilöitä, joka on sekä aikuinen että äänestänyt. \\\\
+    (4) 3x(A(x) $\to$ B(x)) \\
+    On olemassa henkilöitä siten, että henkilö on aikuinen, joka on myös äänestänyt.
+}
+
+\end{document}

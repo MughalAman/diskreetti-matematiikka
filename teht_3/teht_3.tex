@@ -1,0 +1,118 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Diskreetti matematiikka} Tehtävät 3}
+\author{\huge{Aman Mughal}}
+\date{31/01/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+    12. Esitysmateriaalissa on kuvattu suljettu maailma, sen sijaan avoin maailma jää määrittelyltään aika avoimeksi. Tämä tehtävä on kirjoitettu 12.8.2022, jolloin on aurinkoinen hellepäivä. Näin ollen kahden atomilauseen (A: Tänään on aurinkoista, H: Tänään on helle) yhden päivän kuvauksena on suljettu maailma, se on siis täydellinen. Muodostetaan mahdollinen maailma elokuun jokaisesta päivästä, eli samat havainnot joka päivä. \\\\ a) Onko tällainen maailma suljettu vai avoin? \\ 
+    b) Jos maailma on avoin, milloin se sulkeutuu?    
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        &\text{a) Tällainen maailma on suljettu.} \\\\
+        &\text{b) Maailma sulkeutuu, kun havainnot eivät enää muutu päivästä toiseen.}
+    \end{align*}
+}
+
+\qs{}{
+    13. Ovatko lauseet
+$\neg$( A $\land$ B ) ja $\neg$B $\lor \neg$A
+loogisesti yhtäpitäviä? Lauseet ovat loogisesti yhtäpitäviä, jos niiden totuusarvotaulukot ovat samat. Pystytkö perustelemaan asian myös lauselogiikan tautologioiden avulla?
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        &\text{lauseet $\neg$( A $\land$ B ) ja $\neg$B $\lor$ $\neg$A ovat loogisesti yhtäpitäviä.}\\
+        &\text{Tämä voidaan todistaa De Morganin lakien avulla.}\\
+        &\text{De Morganin ensimmäinen laki sanoo: $\neg$(A $\land$ B) = $\neg$A $\lor$ $\neg$B. Toinen laki sanoo: $\neg$(A $\lor$ B) = $\neg$A $\land$ $\neg$B.}\\
+    \end{align*}
+}
+
+\qs{}{
+    14. Sievennä seuraavat lauseet lauselogiikan tautologioiden avulla? Tarkista tarvittaessa vastaukset totuusarvotaulukon avulla. \\\\
+a) A $\land$ (A $\land$ B) 	(osittelulaki, Idempotenssilaki) \\
+b) (A $\land$ B) $\lor$ B 	(vaihdantalaki, teoria: eliminointisäännön alla oleva kaava)
+}
+
+\pf{Vastaus}{
+    \begin{align*}
+        &\text{a) A $\land$ B} \\\\
+        &\text{b) B}
+    \end{align*}
+}
+
+\newpage
+
+\qs{}{
+    15. Eri lauseiden totuusarvotaulukot voidaan selvittää myös valmiiden ohjelmistojen avulla. Etsi ja kerro hyvä web-osoite, jonka avulla voit jatkossa helposti ratkaista lauseiden totuusarvotaulukot tai tarkistaa omat tulokseksi.
+}
+
+\pf{Vastaus}{
+    \href{https://atozmath.com/MathLogic.aspx}{https://atozmath.com/MathLogic.aspx}
+}
+
+\qs{}{
+    16. 
+    Ystävyksiä Aapelia, Yrjöä ja Keijoa epäiltiin röyhkeästä jalokivien varkaudesta.Paikalle kutsuttiin kuuluisa etsivä Kolumpo ratkaisemaan visaista tapausta. Aapeli kertoi salapoliisille ainoastaan: ”Jos minä olisin ollut varkaissa, niin olisi ainakin toinen kavereistani ollut mukana”. Kaksi muuta epäiltyä eivät sanoneet mitään järkevää. Salapoliisi sai kuitenkin tietoonsa, että Aapeli on valehdellut. Hetken miettimisen jälkeen kuuluisa salapoliisi sipaisi viiksiään ja kutsui sitten kaikki ruokasaliin kertoakseen syylliset.
+Mitä etsivä Kolumpo kertoi?
+Vinkki: 0/1-maailma: valehtelijan lausunnon negaatio on totta.
+Vinkki: väite A: Aapeli on varas
+
+}
+
+\pf{Vastaus}{
+    Etsivä Kolumpo kertoi, että Aapeli on yksi syyllisistä jalokivien varkaudessa. Aapelin lausunto "Jos minä olisin ollut varkaissa, niin olisi ainakin toinen kavereistani ollut mukana" on väittämä, joka on valehtelu, sillä salapoliisi sai tietää, että Aapeli on valehdellut. Todelliset syylliset jäävät arvoitukseksi, sillä kaksi muuta epäiltyä eivät sanoneet mitään järkevää.
+}
+
+\qs{}{
+    17. Mihin liittyy lause "Tämä lause on epätosi"? Mikä on sen ongelma ja voidaanko se esittää lauselogiikan tautologioiden avulla?
+}
+
+\pf{Vastaus}{
+    Lauseen ongelma on se, että jos se on tosi, se on epätosi ja jos se on epätosi, se on tosi. Tämä aiheuttaa ristiriidan ja johtaa lauseen olemassaolon ongelmaan.
+}
+
+\qs{}{
+    18. Henkilö puhuu aina totta tai valehtelee aina. Kerran hän sanoi: ”Jos olen todenpuhuja, niin syön hattuni.” Joutuuko puhuja syömään hattunsa?
+}
+
+\pf{Vastaus}{
+    Henkilö  puhuu aina totta tai aina valehtelee, hänen sanansa eivät ole uskottavia. Jos hän sanoo, että hän syö hattunsa, jos hän on todenpuhuja, hän joko syö hattunsa (jos hän on todenpuhuja) tai hän ei syö hattua (jos hän on valheellinen). Joka tapauksessa hänen sanomisensa eivät ole uskottavia, joten meillä ei ole keinoa tietää, joutuuko hän syömään hattunsa.
+}
+
+\newpage
+
+\qs{}{
+    19. (Törmäsin tähän arvoitukseen kun Naamakirja tarjosi jotain viikonloppu.com:sta tai  jostain. Sopii kuitenkin tähän teemaan) \\\\
+
+    Mies ostaa hevosen 60€:lla. \\
+    Hän myy sen 70€:lla. \\
+    Sitten hän ostaa sen takaisin 80€:lla. \\
+    Ja myy taas uudelleen 90€:lla \\
+    
+    Kuinka monta euroa mies tienasi yhteensä? Esitä perustelut, miten päädyit ?
+}
+
+\pf{Vastaus}{
+    \text{Mies tienasi 0€.} \\\\
+    \text{Mies ostaa hevosen 60€:lla.} \\
+    \text{Hän myy sen 70€:lla ja tienaa 10€.} \\
+    \text{Sitten hän ostaa sen takaisin 80€:lla ja häviää 10€} \\
+    \text{Ja myy taas uudelleen 90€:lla ja hän tienasi 10€ 90€ - 80€ = 10€ } \\
+    \text{10€ - 10€ = 0€}
+}
+
+
+
+
+\end{document}

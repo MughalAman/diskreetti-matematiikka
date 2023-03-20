@@ -1,0 +1,44 @@
+% PACKAGE IMPORTS
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{pgfkeys}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{pagecolor,lipsum}
+\usepackage{anyfontsize}
+\usepackage[normalem]{ulem}
+
+%custom colors
+\definecolor{documentbg}{RGB}{48, 85, 197}
+\definecolor{questionbg}{RGB}{11, 19, 43}
+\definecolor{questionaccent}{RGB}{111, 255, 233}
+
+%qa macro
+\newcommand{\qa}[2][]{
+    \begin {tcolorbox}[
+        enhanced jigsaw, 
+        colback=questionbg, 
+        colframe=questionaccent, 
+        arc=3mm, auto outer arc, 
+        boxrule=2pt, 
+        drop fuzzy shadow={black}, 
+        colbacktitle=questionaccent,
+        coltitle=questionbg, 
+        title=#1,
+        ]
+        \begin{minipage}{\textwidth}
+            {#2}
+        \end{minipage}
+    \end {tcolorbox}
+}
+
+%qa add answer macro
+\newcommand{\ans}[2][]{
+    \color{questionaccent}
+    #1
+    \color{white}
+    {#2}
+}

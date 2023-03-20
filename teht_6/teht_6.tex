@@ -1,0 +1,83 @@
+\documentclass{report}
+
+\input{../preamble}
+\input{../macros}
+\input{../letterfonts}
+
+\title{\Huge{Diskreetti matematiikka} Tehtävät 6}
+\author{\huge{Aman Mughal}}
+\date{01/03/2023}
+
+\begin{document}
+
+\maketitle
+
+\qs{}{
+    Erotusjoukko A \textbackslash  B on yleensä eri joukko kuin erotusjoukko B \textbackslash  A. Osoita esimerkin avulla, että on olemassa erotus, jossa 
+
+    A \textbackslash B = B \textbackslash A
+}
+
+\pf{Vastaus}{
+    Oletetaan, että A = \{1, 2, 3 \} ja B = \{3, 4, 5\}. Silloin A \textbackslash B = \{1, 2\} ja B \textbackslash A = \{4, 5\}, joten ne ovat eri joukot. Mutta jos muutetaan B:hen alkio 1 ja poistetaan alkio 5, eli B = \{1, 3, 4\}, niin A \textbackslash B = \{1, 2\} ja B \textbackslash A = \{1, 4\}, jolloin A \textbackslash B = B \textbackslash A = \{2, 3\}. Siis tällä tavoin löytyy esimerkki, jossa A \textbackslash B = B \textbackslash A.
+}
+
+\qs{}{
+    Joukko A = \{1, 3, 9\}.
+    Joukko B = \{ x | x on pariton kokonaisluku väliltä 1 … 10 \}
+    a) Onko joukko A joukon B:n osajoukko?
+    b) Onko kyseessä aito osajoukko?
+    c) Onko joukko A itsensä osajoukko?   
+}
+
+\pf{Vastaus}{
+    a) Joukko A on osajoukko joukosta B, sillä jokainen alkio joukossa A kuuluu myös joukkoon B.
+    b) Kyseessä on aito osajoukko, sillä joukko A sisältää vain kolme alkiota, kun taas joukossa B on viisi lisää: \{1, 3, 5, 7, 9\}.
+    c) A ei ole itsensä osajoukko, sillä joukossa A on kolme alkiota, kun taas A:ssa on vain yksi alkio. Itseään osajoukkona sisältävät ainoastaan yhden alkion joukot
+}
+
+\qs{}{
+    Joukko A = \{ 3, 5, 8, 3, 3, 11 \} ja B = \{ 1, 5, 5, 9 \}.
+    Muodosta joukkojen
+    unioni: A $\cup$ B
+    leikkaus: A $\cap$ B
+    erotusjoukko: A \textbackslash B
+    erotusjoukko: B \textbackslash A
+    erotusjoukko: B \textbackslash B
+    Suositus: vastausjoukosta poistetaan yleensä duplikaatit, esitetään nousevassa järjestyksessä. Vihjei: joukko-opissa kannattaa lähtöjoukoista yleensä heti poistaa duplikaatit.
+}
+
+\pf{Vastaus}{
+    a) Joukkojen A ja B unioni on \{1, 3, 5, 8, 9, 11\}.
+    b) Joukkojen A ja B leikkaus on \{5\}.
+    c) Joukkojen A ja B erotusjoukko A \textbackslash B on \{3, 8, 11\}.
+    d) Joukkojen A ja B erotusjoukko B \textbackslash A on \{1, 9\}.
+    e) Joukon B erotusjoukko B \textbackslash B on tyhjä joukko, sillä se ei sisällä mitään alkioita.
+}
+
+\qs{}{
+    Muodosta edellisen tehtävän joukoista karteesinen tulo.
+}
+
+\pf{Vastaus}{
+    A x B = \{ ( \,3, 1) \,, ( \,3, 5) \,, ( \,3, 9) \,, ( \,5, 1) \,, ( \,5, 5) \,, ( \,5, 9) \,, ( \,8, 1) \,, ( \,8, 5) \,, ( \,8, 9) \,, ( \,11, 1) \,, ( \,11, 5) \,, ( \,11, 9) \, \}
+}
+
+\qs{}{
+    Viikon arvoitus:
+
+Inssi Uljas on matkalla kelmien ja ritarien maassa. Kelmit ja ritarit ovat aivan saman näköisiä, mutta kelmit valehtelevat aina ja ritarit puhuvat aina totta. Kelmit ja ritarit toimivat vuorotellen oppaana paikassa, jossa tie haarautuu kahteen eri suuntaan.
+Oppaina molemmat ovat lyhytsanaisia ja vastaavat ainoastaan yhteen kysymykseen - siihenkin vain “Kyllä” tai “Ei”. Tienviitoissa lukee ainoastaan ”A” ja ”B”. Toinen teistä vie majataloon ja toinen johtaa suolle, missä paha Koodibugi syö kaikki tulijat.
+Inssi Uljas on tullut tähän tienhaaraan ja haluaisi päästä nauttimaan kylmästä olu.. virvokkeista.
+
+Mitä Inssi Uljaan pitäisi kysyä oppaalta päästäkseen majataloon?
+
+}
+
+\pf{Vastaus}{
+    Inssi Uljaan pitäisi kysyä oppaalta: "Jos kysyisin toiselta oppaalta, kumpi tie johtaa majataloon, mitä hän vastaisi?" Tämä kysymys toimii, koska jos kysytty opas on ritari, hän tietää toisen oppaan vastaavan "suota", joten hän vastaa "suota". Jos kysytty opas on kelmi, hän tietää toisen oppaan vastaavan "suota" vaikka oikea vastaus olisi "majatalo". Tämän vuoksi kysytty opas valehtelee ja vastaa "suota". Tämän perusteella Inssi Uljas tietää, että toinen tie vie majataloon. Jos taas kysytty opas vastaa "kyllä" tai "ei", ei Inssi Uljaalla ole varmuutta siitä, onko vastaus oikea vai väärä.
+}
+
+
+
+\end{document}
